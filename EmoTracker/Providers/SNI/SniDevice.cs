@@ -81,8 +81,7 @@ namespace EmoTracker.Providers.SNI
                 }).ConfigureAwait(false);
 
                 mDetectedMapping = detectResponse.MemoryMapping;
-                Log.Debug("[SNI] Connected to {DisplayName}, detected mapping: {Mapping}", mDisplayName,
-                    mDetectedMapping);
+                Log.Debug("[SNI] Connected to {DisplayName}, detected mapping: {Mapping}", mDisplayName, mDetectedMapping);
                 mConnected = true;
                 ConnectionStatusChanged?.Invoke(this, true);
             }
